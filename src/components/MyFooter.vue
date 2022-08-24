@@ -1,7 +1,7 @@
 <template>
     <footer>
-        <div class="d-flex container footerup">
-            <div class="footer-links">
+        <div class="d-flex footerup">
+            <div class="footer-links col">
                 <h4>DC COMICS</h4>
                 <ul>
                     <li>
@@ -39,7 +39,7 @@
                 </ul>
             </div>
 
-            <div class="footer-links">
+            <div class="footer-links col">
                 <h4>DC</h4>
                 <ul>
                     <li>
@@ -78,7 +78,7 @@
                 </ul>
             </div>
 
-            <div class="footer-links">
+            <div class="footer-links col">
                 <h4>Sites</h4>
                 <ul>
                     <li>
@@ -102,8 +102,8 @@
                 <img src="@/assets/img/dc-logo-bg.png">
             </a>
         </div>
-        <div class="d-flex container footerdown">
-            <h4>SIGN-UP NOW!</h4>
+        <div class="d-flex footerdown">
+            <h6>SIGN-UP NOW!</h6>
             <ul>
                 <li>
                     <a href="#">FOLLOW US</a>
@@ -135,13 +135,68 @@
 </script>
 
 <style scoped lang="scss">
+    @import '../style/mixin.scss';
+    @import '../style/vars.scss';
+
     .footerup {
         background-image: url('../assets/img/footer-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
         padding: 30px;
-        text-align: center;
+        padding-left: 100px;
+        padding-right: 100px;
+        text-align: left;
+
+        h4{
+            color: white;
+        };
+
+        ul {
+            list-style: none;
+            font-size: 16px;
+            margin-top: 10px;
+            margin-left: 0px;
+            padding-left: 0px;
+
+            li{
+                
+                a {
+                    color: gray;
+                    text-decoration: none;
+                    margin-top: 10px;
+                }
+            }
+        };
     }
 
     .footerdown {
+        @include spaziatura('spalbetween');
         background-color: #303030;
+        padding: 20px;
+        padding-left: 100px;
+        padding-right: 100px;
+        h6 {
+            color: white;
+            border: 2px solid $brand-color;
+            padding: 5px;
+        };
+
+        ul {
+            list-style: none;
+            margin: 20px;
+            font-size: 12px;
+
+            li{
+                display: inline-block;
+                margin: 0px 10px;
+
+                a {
+                    color: $brand-color;
+                    text-decoration: none;
+                    padding: 10px;
+                }
+            }
+
+        }
     }
 </style>

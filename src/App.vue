@@ -22,12 +22,10 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import './style/vars.scss';
+  @import './style/mixin.scss';
+  @import './style/typo.scss';
+  @import './style/utilities.scss';
+  @import '~bootstrap/scss/bootstrap.scss';
+
 </style>

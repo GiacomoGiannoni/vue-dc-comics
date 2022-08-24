@@ -76,6 +76,38 @@
 
 <style lang="scss">
     @import '../style/vars.scss';
+    @import '../style/mixin.scss';
 
-    
+    header {
+        @include centra('entrambi');
+        @include spaziatura('spalbetween');
+        margin-left: 100px;
+        margin-right: 100px;
+
+        ul {
+            list-style: none;
+            margin: 20px;
+            font-size: 12px;
+
+            li{
+                display: inline-block;
+                margin: 0px 10px;
+
+                a {
+                    color: black;
+                    text-decoration: none;
+                    padding: 10px;
+                    padding-bottom: 40px;
+                    font-weight: bold;
+
+                    &.active, &:hover {
+                        border-bottom: 3px solid $brand-color;
+                        color: $brand-color; 
+                    }
+                }
+            }
+
+        }
+
+    }
 </style>

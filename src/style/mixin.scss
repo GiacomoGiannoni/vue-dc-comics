@@ -1,0 +1,27 @@
+@mixin centra($tipo: 'entrambi') {
+
+    display: flex;
+
+    @if $tipo == 'verticale' {
+        align-items: center;
+    } @else if $tipo == 'orizzontale' {
+        justify-content: center;
+    } @else if $tipo == 'entrambi' {
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+@mixin spaziatura($tipo:'spazio') {
+    display: flex;
+
+    @if $tipo == 'spbetween' {
+        justify-content: space-between;
+    } @else if $tipo == 'sparound' {
+        justify-content: space-around;
+    } @else if $tipo == 'spalbetween' {
+        justify-content: space-between;
+        align-items: center;
+    }
+}
