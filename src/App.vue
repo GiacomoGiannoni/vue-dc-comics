@@ -28,4 +28,8 @@ export default {
   @import './style/utilities.scss';
   @import '~bootstrap/scss/bootstrap.scss';
 
+  #app {
+    height: 100vh;
+  }
+
 </style>

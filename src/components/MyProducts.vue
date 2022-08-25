@@ -1,7 +1,9 @@
 <template>
-    <section class="products">
-        <h2>Content goes here</h2>
-    </section>
+    <main>
+        <div class="products container">
+            <h2>Content goes here</h2>
+        </div>
+    </main>
 </template>
 
 <script>
@@ -12,11 +14,15 @@
 
 <style scoped lang="scss">
     @import '../style/mixin.scss';
+    @import '../style/mixin.scss';
 
-    .products {
+    main {
         background-color: black;
+    }
+    .products {
+        @include spaziatura('spalbetween');
         color: white;
-        padding: 45px;
-        padding-left: 100px;
+        line-height: 100px;
+        height: 100px;
     }
 </style>

@@ -1,202 +1,261 @@
 <template>
     <footer>
-        <div class="d-flex footerup">
-            <div class="footer-links col">
-                <h4>DC COMICS</h4>
+        <div class="wrapper-top">
+            <div class="container">
                 <ul>
-                    <li>
-                        <a href="#">Characters</a>
-                    </li>
-                    <li>
-                        <a href="#">Comics</a>
-                    </li>
-                    <li>
-                        <a href="#">Movies</a>
-                    </li>
-                    <li>
-                        <a href="#">Tv</a>
-                    </li>
-                    <li>
-                        <a href="#">Games</a>
-                    </li>
-                    <li>
-                        <a href="#">Videos</a>
-                    </li>
-                    <li>
-                        <a href="#">News</a>
-                    </li>
-                </ul>
-
-                <h4>SHOP</h4>
-
-                <ul>
-                    <li>
-                        <a href="#">Shop DC</a>
-                    </li>
-                    <li>
-                        <a href="#">Shop DC Collectibles</a>
+                    <li v-for="(linkfooter, indice) in linkfoot" :key="indice">
+                        <div class="wrapper-link">
+                            <div class="img_link">
+                                <img :src="linkfooter.img" alt="">
+                            </div>
+                            <a :href="linkfooter.direzione">{{linkfooter.nome}}</a>
+                        </div>
                     </li>
                 </ul>
             </div>
-
-            <div class="footer-links col">
-                <h4>DC</h4>
-                <ul>
-                    <li>
-                        <a href="#">Terms Of Use</a>
-                    </li>
-                    <li>
-                        <a href="#">Privacy policy (new)</a>
-                    </li>
-                    <li>
-                        <a href="#">Ad Choices</a>
-                    </li>
-                    <li>
-                        <a href="#">Advertising</a>
-                    </li>
-                    <li>
-                        <a href="#">Jobs</a>
-                    </li>
-                    <li>
-                        <a href="#">Subscriptions</a>
-                    </li>
-                    <li>
-                        <a href="#">Talent Workshops</a>
-                    </li>
-                    <li>
-                        <a href="#">CPSC Certificates</a>
-                    </li>
-                    <li>
-                        <a href="#">Ratings</a>
-                    </li>
-                    <li>
-                        <a href="#">Shop Help</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact US</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="footer-links col">
-                <h4>Sites</h4>
-                <ul>
-                    <li>
-                        <a href="#">DC</a>
-                    </li>
-                    <li>
-                        <a href="#">MAD Magazine</a>
-                    </li>
-                    <li>
-                        <a href="#">DC Kids</a>
-                    </li>
-                    <li>
-                        <a href="#">DC Universe</a>
-                    </li>
-                    <li>
-                        <a href="#">DC Power Visa</a>
-                    </li>
-                </ul>
-            </div>
-             <a href="#">
-                <img src="@/assets/img/dc-logo-bg.png">
-            </a>
         </div>
-        <div class="d-flex footerdown">
-            <h6>SIGN-UP NOW!</h6>
-            <ul>
-                <li>
-                    <a href="#">FOLLOW US</a>
-                </li>
-                <li>
-                    <a href="#"><img src="@/assets/img/footer-facebook.png"></a>
-                </li>
-                <li>
-                    <a href="#"><img src="@/assets/img/footer-twitter.png"></a>
-                </li>
-                <li>
-                    <a href="#"><img src="@/assets/img/footer-youtube.png"></a>
-                </li>
-                <li>
-                    <a href="#"><img src="@/assets/img/footer-pinterest.png"></a>
-                </li>
-                <li>
-                    <a href="#"><img src="@/assets/img/footer-periscope.png"></a>
-                </li>
-            </ul>
+
+        <div class="wrapper-mid">
+            <div class="container">
+                <div class="cols">
+                    <div class="col">
+                        <div class="cont-col">
+                            <h2>DC COMICS</h2>
+                            <ul>
+                                <li>Comics</li>
+                                <li>Movies</li>
+                                <li>TV</li>
+                                <li>Comics</li>
+                                <li>Movies</li>
+                                <li>TV</li>
+                                <li>Comics</li>
+                            </ul>
+
+                            <h2>SHOP</h2>
+                            <ul>
+                                <li>Shop DC</li>
+                                <li>ShopDC Collectibles</li>
+                            </ul>
+                        </div>
+
+                        <div class="cont-col">
+                            <h2>DC</h2>
+                            <ul>
+                                <li>Comics</li>
+                                <li>Movies</li>
+                                <li>TV</li>
+                                <li>Comics</li>
+                                <li>Movies</li>
+                                <li>TV</li>
+                                <li>Comics</li>
+                                <li>Comics</li>
+                                <li>Movies</li>
+                                <li>TV</li>
+                                <li>Comics</li>
+                            </ul>
+                        </div>
+
+                        <div class="cont-col">
+                            <h2>SITES</h2>
+                            <ul>
+                                <li>Comics</li>
+                                <li>Movies</li>
+                                <li>TV</li>
+                                <li>Comics</li>
+                                <li>Movies</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-img">
+                        <img src="@/assets/img/dc-logo-bg.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="wrapper-bot">
+            <div class="container">
+                <div class="wrapper-footer-bot">
+                    <button class="btn">SIGN-UP NOW!</button>
+                    <div class="social">
+                        <h2>FOLLOW AS</h2>
+                        <img v-for="(social, indice) in social" :key="indice" :src="social.url" :alt="social.nome">
+                    </div>
+                </div>                   
+            </div>
         </div>
     </footer>
 </template>
 
 <script>
-    export default {
-        name: 'MyFooter',
+export default {
+    nome: 'MyFooter',
+    data(){
+        return{
+            linkfoot:   [
+                            {
+                                nome: 'DIGITAL COMICS',
+                                direzione: '#',
+                                img: require ('@/assets/img/buy-comics-digital-comics.png')
+                            },
+                            {
+                                nome: 'DC MERCHANDISE',
+                                direzione: '#',
+                                img: require ('@/assets/img/buy-comics-merchandise.png')
+                            },
+                            {
+                                nome: 'SUBSCRIPTION',
+                                direzione: '#',
+                                img: require ('@/assets/img/buy-comics-subscriptions.png')
+                            },
+                            {
+                                nome: 'COMIC SHOP LOCATOR',
+                                direzione: '#',
+                                img: require ('@/assets/img/buy-comics-shop-locator.png')
+                            },
+                            {
+                                nome: 'DC POWER VISA',
+                                direzione: '#',
+                                img: require ('@/assets/img/buy-dc-power-visa.svg')
+                            },
+                        ],
+            social:     [
+                            {
+                                url: require ('@/assets/img/footer-facebook.png') ,
+                                nome: 'facebook'
+                            },
+                            {
+                                url: require ('@/assets/img/footer-twitter.png'),
+                                nome: 'twitter'
+                            },
+                            {
+                                url: require ('@/assets/img/footer-youtube.png'),
+                                nome: 'youtube'
+                            },
+                            {
+                                url: require ('@/assets/img/footer-pinterest.png'),
+                                nome: 'pinterest'
+                            },
+                            {
+                                url: require ('@/assets/img/footer-periscope.png'),
+                                nome: 'periscope'
+                            },
+                        ]
+        }
     }
+}
 </script>
 
-<style scoped lang="scss">
-    @import '../style/mixin.scss';
+<style lang="scss">
     @import '../style/vars.scss';
-
-    .footerup {
+    @import '../style/mixin.scss';
+    footer{
+        height: calc(100% - 250px);
         background-image: url('../assets/img/footer-bg.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-        padding: 30px;
-        padding-left: 100px;
-        padding-right: 100px;
-        text-align: left;
-
-        h4{
-            color: white;
-        };
-
-        ul {
-            list-style: none;
-            font-size: 16px;
-            margin-top: 10px;
-            margin-left: 0px;
-            padding-left: 0px;
-
-            li{
-                
-                a {
-                    color: gray;
-                    text-decoration: none;
-                    margin-top: 10px;
+        .wrapper-top{
+            height: 130px;
+            background-color: $brand-color;
+            @include spaziatura('spalbetween');
+            ul{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 100%;
+                padding: 10px;
+                li{
+                    list-style: none;
+                    
+                    .wrapper-link{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        .img_link{
+                            width: 40px;
+                            margin-right: 10px;
+                            
+                            img{
+                                width: 100%;
+                                object-fit: cover;
+                                                             
+                            }
+                        }
+                        a{
+                            line-height: 100%;
+                            text-decoration: none;
+                            color: white;
+                        }
+                    }
                 }
             }
-        };
-    }
-
-    .footerdown {
-        @include spaziatura('spalbetween');
-        background-color: #303030;
-        padding: 20px;
-        padding-left: 100px;
-        padding-right: 100px;
-        h6 {
-            color: white;
-            border: 2px solid $brand-color;
-            padding: 5px;
-        };
-
-        ul {
-            list-style: none;
-            margin: 20px;
-            font-size: 12px;
-
-            li{
-                display: inline-block;
-                margin: 0px 10px;
-
-                a {
-                    color: $brand-color;
-                    text-decoration: none;
+        }
+        .wrapper-mid{
+            height: calc(100% - 230px);
+            .cols{
+                display: flex;
+                justify-content: space-between;
+                height: 100%;
+                .col{
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    padding-top: 50px;
+                    .cont-col{
+                        margin-right: 40px;
+                        height: 100%;
+                        h2{
+                            color: white;
+                            margin: 10px 0;
+                        }
+    
+                        li{
+                            list-style: none;
+                            font-size: 17px;
+                            color: gray;
+                            line-height: 25px;
+                        }
+                    }
+                }
+                .col-img{
+                    width: 38%;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+        .wrapper-bot{
+            @include spaziatura('spalbetween');
+            z-index: 999;
+            height: 100px;
+            background-color: #303030;
+            .wrapper-footer-bot{
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .btn{
+                    
                     padding: 10px;
+                    font-size: 18px;
+                    border: 1px solid ;
+                    color: $brand-color;
+                    background-color: #303030;
+                }
+                .social{
+                    display: flex;
+                    align-items: center;
+                    color: gray;
+                    img{
+                        margin-left: 15px;
+                    }
                 }
             }
-
         }
     }
 </style>
