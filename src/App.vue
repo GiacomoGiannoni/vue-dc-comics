@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <MyHeader />
+    <MyJumbotron />
     <MyProducts />
     <MyFooter />
   </div>
@@ -10,14 +11,16 @@
 import MyHeader from './components/MyHeader';
 import MyProducts from './components/MyProducts';
 import MyFooter from './components/MyFooter';
+import MyJumbotron from './components/MyJumbotron.vue';
 
 export default {
   name: 'App',
   components: {
     MyHeader,
     MyProducts,
-    MyFooter
-}
+    MyFooter,
+    MyJumbotron
+  }
 }
 </script>
 
@@ -28,8 +31,10 @@ export default {
   @import './style/utilities.scss';
   @import '~bootstrap/scss/bootstrap.scss';
 
+
   #app {
     height: 100vh;
+    
   }
 
 </style>
